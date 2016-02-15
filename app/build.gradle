@@ -4,9 +4,8 @@ apply plugin: 'me.tatarka.retrolambda'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
     defaultConfig {
-        applicationId "id.zelory.sischat"
+        applicationId 'id.sis.chat'
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -26,6 +25,8 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
     }
 }
 

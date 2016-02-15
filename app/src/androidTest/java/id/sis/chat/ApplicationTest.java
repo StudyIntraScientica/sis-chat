@@ -1,4 +1,4 @@
-package id.zelory.sischat;
+package id.sis.chat;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

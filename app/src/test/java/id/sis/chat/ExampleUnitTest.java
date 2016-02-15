@@ -1,4 +1,4 @@
-package id.zelory.sischat;
+package id.sis.chat;
 
 import org.junit.Test;
 
