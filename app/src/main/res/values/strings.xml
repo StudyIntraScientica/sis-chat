@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SIS Chat</string>
+    <string name="splash_text">&#169; 2016 Study Intra Scientica</string>
+    <string name="sis_chat">SIS Chat</string>
 </resources>
