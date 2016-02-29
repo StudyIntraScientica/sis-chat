@@ -2,6 +2,8 @@ package id.sis.chat;
 
 import android.app.Application;
 
+import com.firebase.client.Firebase;
+
 import id.zelory.sischat.BuildConfig;
 import timber.log.Timber;
 
@@ -20,6 +22,9 @@ public class SisChatApp extends Application {
     public void onCreate() {
         super.onCreate();
         INSTANCE = this;
+
+        Firebase.setAndroidContext(this);
+        Firebase.getDefaultConfig().setPersistenceEnabled(true);
 
         if (BuildConfig.DEBUG){
             Timber.plant(new Timber.DebugTree());
