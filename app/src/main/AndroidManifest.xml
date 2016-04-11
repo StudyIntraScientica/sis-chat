@@ -23,6 +23,7 @@
 
         <activity android:name="id.sis.chat.ui.MainActivity"/>
         <activity android:name="id.sis.chat.ui.InputNameActivity"/>
+        <activity android:name="id.sis.chat.ui.RoomsActivity"/>
     </application>
 
 </manifest>

@@ -28,7 +28,7 @@ public class SplashActivity extends BenihActivity {
         try {
             String name = LocalDataManager.getInstance().getSavedName();
             Timber.d("Name: " + name);
-            new Handler().postDelayed(() -> startActivity(new Intent(this, MainActivity.class)), 1800);
+            new Handler().postDelayed(() -> startActivity(new Intent(this, RoomsActivity.class)), 1800);
         } catch (RuntimeException e) {
             e.printStackTrace();
             new Handler().postDelayed(() -> startActivity(new Intent(this, InputNameActivity.class)), 1800);
