@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import id.sis.chat.data.local.LocalDataManager;
 import id.zelory.benih.ui.BenihActivity;
 import id.zelory.sischat.R;
+import timber.log.Timber;
 
 /**
  * Created on : February 22, 2016
@@ -23,6 +25,13 @@ public class SplashActivity extends BenihActivity {
 
     @Override
     protected void onViewReady(Bundle savedInstanceState) {
-        new Handler().postDelayed(() -> startActivity(new Intent(this, MainActivity.class)), 1800);
+        try {
+            String name = LocalDataManager.getInstance().getSavedName();
+            Timber.d("Name: " + name);
+            new Handler().postDelayed(() -> startActivity(new Intent(this, MainActivity.class)), 1800);
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            new Handler().postDelayed(() -> startActivity(new Intent(this, InputNameActivity.class)), 1800);
+        }
     }
 }
